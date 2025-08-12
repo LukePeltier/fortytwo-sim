@@ -6,11 +6,11 @@ class Domino:
         # Validate inputs are integers
         if not isinstance(sideOne, int) or not isinstance(sideTwo, int):
             raise TypeError("Domino values must be integers")
-        
+
         # Validate values are between 0 and 6
         if not (0 <= sideOne <= 6) or not (0 <= sideTwo <= 6):
             raise ValueError("Domino values must be between 0 and 6")
-            
+
         self.sideOne: int = sideOne
         self.sideTwo: int = sideTwo
         self.natural_suit: int = sideOne if sideOne > sideTwo else sideTwo
